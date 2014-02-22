@@ -1,0 +1,57 @@
+/* 
+  Localizable.strings
+  NewMoeApps
+
+  Created by bi119aTe5hXk on 13-12-16.
+  Copyright (c) 2013年 HT&L. All rights reserved.
+*/
+
+//TITLE
+"ERROR" = "エラー";
+"New" = "新着";
+"Free" = "無料";
+"Paid" = "有料";
+"ADD_APP_TITLE" = "アプリを投稿する";
+"App Detail" = "アプリの説明";
+"Keyword or AppID" = "キーワードもしくはアプリのIDを入力";
+"All" = "すべて";
+"Loadmore" = "ロード...";
+"App List" = "アプリリスト";
+"ADD_SUBMIT_APP_PLACEHOLDER" = "アプリのIDもしくはリンクを入力してください";
+"Category" = "カテゴリー";
+"Search" = "検索";
+"MORE" = "その他";
+"CATEGORY_NUM_APP" = "%@アプリ";
+"PAD_WELCOME_TITLE" = "アプリをお選びくださいにゃ〜ご主人様";
+"UPDATE_TITLE" = "アップデート発見！";
+"UP_TO_DATE" = "アップデートはないです！";
+"HOW_TO_CREAT_ACCOUNT_TITLE" = "アカウントを作成";
+"ENABLE_AUDIO" = "音声";
+"HOW_TO_TITLE" = "ヘルプ";
+"VOICE_TITLE" = "音声";
+"SETTINGS_TITLE" = "設定";
+"VOICE_CREDIT" = "音声の提供：小春音アミ All Rights Reserved. (非商用)";
+"DEV_CREDIT" = "開発者: @bi119aTe5hXk, @Ariagle";
+"INSTALL_TUI_TITLE" = "tui.tongbu.comに同步推をインストールしてください";
+
+//MSG
+"SERVER_CONNECT_ERROR" = "インターネット接続を確認してくださいにゃ…QAQ";
+"SUBMIT_SUCCESS" = "アプリを送信する";
+"SUBMIT_FAILED_URL_ERROR" = "URL / AppIDエラー";
+"SUBMIT_FAILED_DATABASE_ERROR" = "データベースエラー";
+"UPDATE_MSG" = "新しいバージョンのMoeAppsアップデートする?";
+
+//"NEW_APP_UPDATED" = "New app updated";
+"NEW_APP_ADDED" = "%@個のアプリが追加されたにゃ〜、確認して見ないか？";
+"APP_UPDATED" = "新しいのMoeAppsリリースです，更新する？";
+
+//BTN
+"OK" = "(*'-')b OK!";
+"Cancel" = "キャンセル";
+"ADD_SUBMIT_APP" = "アプリのIDもしくはリンクを入力";
+"ADD_JUMP_SITE" = "もえふぉへアクセス";
+"SUBMIT_BTN" = "提出にゃん";
+"Retry" = "再試行";
+"INSTALLED" = "インストール済み";
+"AUDIO_EXAMPLE_BTN" = "再生";
+"CHECK_UPDATE_BTN" = "アップデートをチェック";

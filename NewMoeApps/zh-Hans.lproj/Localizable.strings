@@ -1,0 +1,58 @@
+/* 
+  Localizable.strings
+  NewMoeApps
+
+  Created by bi119aTe5hXk on 13-12-16.
+  Copyright (c) 2013年 HT&L. All rights reserved.
+*/
+
+//TITLE
+"ERROR" = "错误";
+"New" = "最新";
+"Free" = "免费";
+"Paid" = "付费";
+"ADD_APP_TITLE" = "提交程序？";
+"App Detail" = "程序详情";
+"Keyword or AppID" = "请输入关键词或AppID";
+"All" = "全部";
+"Loadmore" = "加载更多...";
+"App List" = "程序列表";
+"ADD_SUBMIT_APP_PLACEHOLDER" = "请输入AppID或者链接";
+"Category" = "分类";
+"Search" = "搜索";
+"MORE" = "更多";
+"CATEGORY_NUM_APP" = "%@个程序";
+"PAD_WELCOME_TITLE" = "主人，请挑选一个App喵～";
+"UPDATE_TITLE" = "发现更新！";
+"UP_TO_DATE" = "您正在使用的是最新版本的MoeApps喵！";
+"HOW_TO_CREAT_ACCOUNT_TITLE" = "创建日本区AppStore账号";
+"ENABLE_AUDIO" = "开启萌妹纸语音（日文）";
+"HOW_TO_TITLE" = "如何";
+"VOICE_TITLE" = "语音";
+"SETTINGS_TITLE" = "设置";
+"VOICE_CREDIT" = "语音提供：小春音アミ 版权所有. (非商业使用)";
+"DEV_CREDIT" = "开发者: @bi119aTe5hXk, @Ariagle";
+"INSTALL_TUI_TITLE" = "请先在tui.tongbu.com安装同步推";
+
+//MSG
+"SERVER_CONNECT_ERROR" = "无法链接服务器";
+"SUBMIT_SUCCESS" = "成功提交程序";
+"SUBMIT_FAILED_URL_ERROR" = "URL格式或AppID错误";
+"SUBMIT_FAILED_DATABASE_ERROR" = "数据库无法写入";
+"UPDATE_MSG" = "更新MoeApps到最新版本么？";
+
+//"NEW_APP_UPDATED" = "有程序可以更新了哦～";
+"NEW_APP_ADDED" = "有%@个新的程序被收录了～不去看看喵？";
+"APP_UPDATED" = "新版本的MoeApps发布了，不更新喵？";
+
+
+//BTN
+"OK" = "(*'-')b OK!";
+"Cancel" = "取消";
+"ADD_SUBMIT_APP" = "直接提交";
+"ADD_JUMP_SITE" = "访问提交页面";
+"SUBMIT_BTN" = "提交";
+"Retry" = "重试";
+"INSTALLED" = "已安装";
+"AUDIO_EXAMPLE_BTN" = "播放示例";
+"CHECK_UPDATE_BTN" = "重注册推送/检查版本更新";

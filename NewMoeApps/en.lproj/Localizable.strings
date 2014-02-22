@@ -1,0 +1,57 @@
+/* 
+  Localizable.strings
+  NewMoeApps
+
+  Created by bi119aTe5hXk on 13-12-16.
+  Copyright (c) 2013年 HT&L. All rights reserved.
+*/
+
+//TITLE
+"ERROR" = "Error";
+"New" = "New";
+"Free" = "Free";
+"Paid" = "Paid";
+"ADD_APP_TITLE" = "Submit an app?";
+"App Detail" = "App Detail";
+"Keyword or AppID" = "Keyword or AppID";
+"All" = "All";
+"Loadmore" = "Load More...";
+"App List" = "App List";
+"ADD_SUBMIT_APP_PLACEHOLDER" = "Please input AppID or URL.";
+"Category" = "Category";
+"Search" = "Search";
+"MORE" = "More";
+"CATEGORY_NUM_APP" = "%@ Apps";
+"PAD_WELCOME_TITLE" = "Please select an app. Master~";
+"UPDATE_TITLE" = "Update found!";
+"UP_TO_DATE" = "You are up-to-date!";
+"HOW_TO_CREAT_ACCOUNT_TITLE" = "Create a JP-AppStore account";
+"ENABLE_AUDIO" = "Enable Voice (Japanese)";
+"HOW_TO_TITLE" = "How to";
+"VOICE_TITLE" = "Voice";
+"SETTINGS_TITLE" = "Settings";
+"VOICE_CREDIT" = "Voice form 小春音アミ All Rights Reserved. (Non-commercial use)";
+"DEV_CREDIT" = "Developer: @bi119aTe5hXk, @Ariagle";
+"INSTALL_TUI_TITLE" = "Please install TongbuTui in tui.tongbu.com";
+
+//MSG
+"SERVER_CONNECT_ERROR" = "Could not connect to server";
+"SUBMIT_SUCCESS" = "Submit app success.";
+"SUBMIT_FAILED_URL_ERROR" = "URL or AppID error";
+"SUBMIT_FAILED_DATABASE_ERROR" = "Database I/O Error";
+"UPDATE_MSG" = "Update MoeApps to new version?";
+
+//"NEW_APP_UPDATED" = "New app updated:";
+"NEW_APP_ADDED" = "There're %@ new moe apps added~ Take a look?";
+"APP_UPDATED" = "New version of MoeApps released. Update?";
+
+//BTN
+"OK" = "(*'-')b OK!";
+"Cancel" = "Cancel";
+"ADD_SUBMIT_APP" = "Submit directly";
+"ADD_JUMP_SITE" = "Visit submit page";
+"SUBMIT_BTN" = "Submit";
+"Retry" = "Retry";
+"INSTALLED" = "Installed";
+"AUDIO_EXAMPLE_BTN" = "Play Example";
+"CHECK_UPDATE_BTN" = "Re-register push & check update";

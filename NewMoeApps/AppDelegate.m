@@ -62,9 +62,9 @@
     }else{
         device = @"iPhone/iPod";
     }
-    if (![[GANTracker sharedTracker] trackEvent:@"Application iOS"
+    if (![[GANTracker sharedTracker] trackEvent:@"OS Type"
                                          action:device
-                                          label:@"MoeApps"
+                                          label:@"System Version"
                                           value:[[UIDevice currentDevice] systemVersion]
                                       withError:&error]){
         NSLog(@"%@",error);

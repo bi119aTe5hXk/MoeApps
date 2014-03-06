@@ -62,7 +62,12 @@
     UIBarButtonItem *tuibtn = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemReply
                                                                               target:self
                                                                               action:@selector(viewinTongbuTui:)];
-	self.navigationItem.rightBarButtonItems = @[sharebtn,tuibtn];
+	if ([[UIApplication sharedApplication] canOpenURL:[NSURL URLWithString:@"tbtui://opendetail"]]) {
+        self.navigationItem.rightBarButtonItems = @[sharebtn,tuibtn];
+    }else{
+        self.navigationItem.rightBarButtonItem = sharebtn;
+    }
+    
     
     self.appdetailarray = [[list valueForKey:@"response"] valueForKey:@"app"];
     

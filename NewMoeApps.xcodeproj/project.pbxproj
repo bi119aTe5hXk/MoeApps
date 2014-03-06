@@ -81,6 +81,7 @@
 		47DCDAD718609E9E00555D97 /* UITabBarStar.png in Resources */ = {isa = PBXBuildFile; fileRef = 47DCDAD618609E9E00555D97 /* UITabBarStar.png */; };
 		47DCE5FB1855F82C00141321 /* libGoogleAnalytics.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 47DCE5FA1855F82C00141321 /* libGoogleAnalytics.a */; };
 		47DCE6041859E82500141321 /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47DCE6031859E82500141321 /* AddressBook.framework */; };
+		47E8A59B18C8A40B00A84F8E /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47E8A59A18C8A40B00A84F8E /* CoreTelephony.framework */; };
 		47EF54681837C4F3002AED54 /* CategoryListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 47EF54671837C4F3002AED54 /* CategoryListViewController.m */; };
 		47EF546F1837CCB1002AED54 /* CategoryAppListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 47EF546E1837CCB1002AED54 /* CategoryAppListViewController.m */; };
 /* End PBXBuildFile section */
@@ -220,6 +221,7 @@
 		47DCE5F91855F82C00141321 /* GANTracker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GANTracker.h; sourceTree = "<group>"; };
 		47DCE5FA1855F82C00141321 /* libGoogleAnalytics.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libGoogleAnalytics.a; sourceTree = "<group>"; };
 		47DCE6031859E82500141321 /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
+		47E8A59A18C8A40B00A84F8E /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
 		47EF54661837C4F3002AED54 /* CategoryListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoryListViewController.h; sourceTree = "<group>"; };
 		47EF54671837C4F3002AED54 /* CategoryListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategoryListViewController.m; sourceTree = "<group>"; };
 		47EF546D1837CCB1002AED54 /* CategoryAppListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoryAppListViewController.h; sourceTree = "<group>"; };
@@ -231,6 +233,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				47E8A59B18C8A40B00A84F8E /* CoreTelephony.framework in Frameworks */,
 				47179631186B34F800318E73 /* AVFoundation.framework in Frameworks */,
 				47C98B0E1861C6E300D55468 /* AdSupport.framework in Frameworks */,
 				4727B9F916B554AE00A6F19D /* CoreGraphics.framework in Frameworks */,
@@ -276,6 +279,7 @@
 		4727B9F316B554AE00A6F19D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				47E8A59A18C8A40B00A84F8E /* CoreTelephony.framework */,
 				47179630186B34F800318E73 /* AVFoundation.framework */,
 				47C98B0D1861C6E300D55468 /* AdSupport.framework */,
 				47C98B0B1861C5F800D55468 /* AudioToolbox.framework */,
@@ -746,6 +750,7 @@
 					"$(inherited)",
 					/Users/bi119aTe5hXk/Documents/Projects/NewMoeApps/NewMoeApps,
 					"$(PROJECT_DIR)",
+					"/Users/bi119aTe5hXk/Documents/Projects/NewMoeApps/NewMoeApps/Add-ons/GoogleAnalyticsServicesiOS_3.03",
 				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -771,6 +776,7 @@
 					"$(inherited)",
 					/Users/bi119aTe5hXk/Documents/Projects/NewMoeApps/NewMoeApps,
 					"$(PROJECT_DIR)",
+					"/Users/bi119aTe5hXk/Documents/Projects/NewMoeApps/NewMoeApps/Add-ons/GoogleAnalyticsServicesiOS_3.03",
 				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";

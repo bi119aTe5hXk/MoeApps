@@ -117,3 +117,7 @@ iOSInjectionProject/
 
 *.png
 *.wav
+*.jpg
+*.jpeg
+*.mp3
+API.h

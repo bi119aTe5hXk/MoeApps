@@ -20,7 +20,7 @@
     #import "DetailViewController_iPad.h"
     #import <SDWebImage/UIImageView+WebCache.h>
     #import "AppCell.h"
-    #import "GANTracker.h"
-    #import "GADBannerView.h"
-    #import "GADInterstitial.h"
+    //#import "GANTracker.h"
+    //#import "GADBannerView.h"
+    //#import "GADInterstitial.h"
 #endif

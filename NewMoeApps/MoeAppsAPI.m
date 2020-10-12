@@ -57,7 +57,7 @@
     if (token != nil) {
         urlstr = [urlstr stringByAppendingString:[NSString stringWithFormat:@"&token=%@",token]];
     }
-    [self requestJsonWithURL:[NSURL URLWithString:urlstr]];
+    [self requestJsonWithURL:urlstr];
 }
 
 -(void)loadNewestAppListWithType:(NSInteger)type WithPage:(NSInteger)page WithCategory:(NSString *)category{
@@ -79,13 +79,13 @@
     }
     
     
-    [self requestJsonWithURL:[NSURL URLWithString:urlstr]];
+    [self requestJsonWithURL:urlstr];
 }
 
 
 -(void)loadCategoryList{
     NSString *urlstr = [self mainURLWithPath:[NSString stringWithFormat:@"categories.json?lang=%@",languagecode]];
-    [self requestJsonWithURL:[NSURL URLWithString:urlstr]];
+    [self requestJsonWithURL:urlstr];
 }
 -(void)SearchWithKeyword:(NSString *)keyword WithPage:(NSInteger)page WithType:(NSInteger)type{
     NSString *keyEncoded = (__bridge NSString *)CFURLCreateStringByAddingPercentEscapes(NULL,(CFStringRef)keyword,NULL,(CFStringRef)@"!*'\"();:@&=+$,/?%#[]% ",kCFStringEncodingUTF8);
@@ -101,20 +101,24 @@
         urlstr = [urlstr stringByAppendingString:@"&price=paid"];
     }
     
-    [self requestJsonWithURL:[NSURL URLWithString:urlstr]];
+    [self requestJsonWithURL:urlstr];
 }
 
 -(void)getAppDetailwithAppID:(NSString *)app_id{
     NSString *urlstr = [self mainURLWithPath:[NSString stringWithFormat:@"app/detail.json?app_id=%@&lang=%@",app_id,languagecode]];
-    [self requestJsonWithURL:[NSURL URLWithString:urlstr]];
+    [self requestJsonWithURL:urlstr];
 }
 
 
 
 
 
-- (BOOL)requestJsonWithURL:(NSURL *)url{
+- (BOOL)requestJsonWithURL:(NSString *)str{
     [self cancelConnection];
+    
+    str = [str stringByAppendingFormat:@"&api_key=%@",@MFCkey];
+    
+	NSURL *url = [NSURL URLWithString:str];
     if (debugmode == YES) {
         NSLog(@"Start Load JSON form: %@",url);
     }

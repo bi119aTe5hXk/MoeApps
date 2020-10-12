@@ -43,9 +43,9 @@
         splitViewController.delegate = (id)navigationController.topViewController;
     }
     
-    [[GANTracker sharedTracker] startTrackerWithAccountID:@"UA-23799776-2"
-                                           dispatchPeriod:10
-                                                 delegate:nil];
+//    [[GANTracker sharedTracker] startTrackerWithAccountID:@"UA-23799776-2"
+//                                           dispatchPeriod:10
+//                                                 delegate:nil];
     NSError *error;
     /*
      if (![[GANTracker sharedTracker] setCustomVariableAtIndex:1
@@ -62,22 +62,29 @@
     }else{
         device = @"iPhone/iPod";
     }
-    if (![[GANTracker sharedTracker] trackEvent:@"OS Type"
-                                         action:device
-                                          label:@"System Version"
-                                          value:[[UIDevice currentDevice] systemVersion]
-                                      withError:&error]){
-        NSLog(@"%@",error);
-    }
-    if (![[GANTracker sharedTracker] trackPageview:@"/" withError:&error]) {
-        NSLog(@"%@",error);
-    }
+//    if (![[GANTracker sharedTracker] trackEvent:@"OS Type"
+//                                         action:device
+//                                          label:@"System Version"
+//                                          value:[[UIDevice currentDevice] systemVersion]
+//                                      withError:&error]){
+//        NSLog(@"%@",error);
+//    }
+//    if (![[GANTracker sharedTracker] trackPageview:@"/" withError:&error]) {
+//        NSLog(@"%@",error);
+//    }
     moeapi = [[MoeAppsAPI alloc] initWithdelegate:self];
     
     application.applicationIconBadgeNumber = 0;
-    [[UIApplication sharedApplication] registerForRemoteNotificationTypes:(UIRemoteNotificationTypeBadge |
-                                                                           UIRemoteNotificationTypeSound |
-                                                                           UIRemoteNotificationTypeAlert)];
+//    if ([[[UIDevice currentDevice] systemVersion] floatValue] >= 8.0) {
+//        UIUserNotificationSettings* notificationSettings = [UIUserNotificationSettings settingsForTypes:UIUserNotificationTypeAlert | UIUserNotificationTypeBadge | UIUserNotificationTypeSound categories:nil];
+//        [[UIApplication sharedApplication] registerUserNotificationSettings:notificationSettings];
+//        
+//        //[[UIApplication sharedApplication] registerForRemoteNotifications];
+//    }else{
+//        [[UIApplication sharedApplication] registerForRemoteNotificationTypes:(UIRemoteNotificationTypeBadge |
+//                                                                               UIRemoteNotificationTypeSound |
+//                                                                               UIRemoteNotificationTypeAlert)];
+//    }
     needshowmsg = NO;
     
     if (isVoiceEnable == YES) {
@@ -132,9 +139,16 @@
     
 }
 -(void)registerpush{
-    [[UIApplication sharedApplication] registerForRemoteNotificationTypes:(UIRemoteNotificationTypeBadge |
-                                                                           UIRemoteNotificationTypeSound |
-                                                                           UIRemoteNotificationTypeAlert)];
+//    if ([[[UIDevice currentDevice] systemVersion] floatValue] >= 8.0) {
+//        UIUserNotificationSettings* notificationSettings = [UIUserNotificationSettings settingsForTypes:UIUserNotificationTypeAlert | UIUserNotificationTypeBadge | UIUserNotificationTypeSound categories:nil];
+//        [[UIApplication sharedApplication] registerUserNotificationSettings:notificationSettings];
+//        
+//        //[[UIApplication sharedApplication] registerForRemoteNotifications];
+//    }else{
+//        [[UIApplication sharedApplication] registerForRemoteNotificationTypes:(UIRemoteNotificationTypeBadge |
+//                                                                               UIRemoteNotificationTypeSound |
+//                                                                               UIRemoteNotificationTypeAlert)];
+//    }
     needshowmsg = YES;
 }
 
@@ -175,6 +189,10 @@
     
 }
 //Push part
+-(void)application:(UIApplication *)application didRegisterUserNotificationSettings:(UIUserNotificationSettings *)notificationSettings{
+    [[UIApplication sharedApplication] registerForRemoteNotifications];
+    
+}
 -(void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
     if (debugmode == YES) {
         NSLog(@"deviceToken: %@", deviceToken);
@@ -184,12 +202,12 @@
     newToken = [newToken stringByReplacingOccurrencesOfString:@" " withString:@""];
     
     NSString *build = [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleVersion"];
-    [moeapi appinitwithVersion:build WithPushToken:newToken];
+    //[moeapi appinitwithVersion:build WithPushToken:newToken];
 }
 -(void)application:(UIApplication *)application didFailToRegisterForRemoteNotificationsWithError:(NSError *)error {
     NSLog(@"Error: %@", error);
     NSString *build = [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleVersion"];
-    [moeapi appinitwithVersion:build WithPushToken:nil];
+    //[moeapi appinitwithVersion:build WithPushToken:nil];
     if (debugmode == YES) {
         UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"ERROR",@"")
                                                             message:[error localizedDescription]

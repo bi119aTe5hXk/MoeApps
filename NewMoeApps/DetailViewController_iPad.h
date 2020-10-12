@@ -10,12 +10,12 @@
 #import <StoreKit/StoreKit.h>
 #import "iHasApp.h"
 #import "CheckAppInstalled.h"
-#import "GADBannerView.h"
-#import "GADInterstitial.h"
-@interface DetailViewController_iPad : UIViewController<MoeAppsAPIDelegate,SKStoreProductViewControllerDelegate,UIActionSheetDelegate,UISplitViewControllerDelegate,GADBannerViewDelegate,GADInterstitialDelegate,UIAlertViewDelegate,AVAudioPlayerDelegate,CheckAppInstalledDelegate>{
+//#import "GADBannerView.h"
+//#import "GADInterstitial.h"
+@interface DetailViewController_iPad : UIViewController<MoeAppsAPIDelegate,UIActionSheetDelegate,UISplitViewControllerDelegate,UIAlertViewDelegate,AVAudioPlayerDelegate,CheckAppInstalledDelegate>{//GADBannerViewDelegate,GADInterstitialDelegate,
     
-    GADBannerView *bannerView_;
-    GADInterstitial *interstitial_;
+    //GADBannerView *bannerView_;
+    //GADInterstitial *interstitial_;
     MoeAppsAPI *moeapi;
     CheckAppInstalled *checkapp;
     UIImageView *img;
@@ -35,7 +35,7 @@
 @property (nonatomic,retain) IBOutlet UILabel *category;
 @property (nonatomic, retain) IBOutlet UIButton *storebtn;
 //@property (nonatomic, retain) IBOutlet UIButton *tuibtn;
-@property (nonatomic, retain) IBOutlet UITextView *description;
+@property (nonatomic, retain) IBOutlet UITextView *descriptionfield;
 
 -(IBAction)appstorebtnpressd:(id)sender;
 -(IBAction)viewinTongbuTui:(id)sender;

@@ -30,7 +30,7 @@
     [self.inittitle setHidden:NO];
     [self.initview setHidden:NO];
     [self configureView];
-    [self loadAdmobAdView];
+    //[self loadAdmobAdView];
     
     
     self.userdefault = [NSUserDefaults standardUserDefaults];
@@ -70,7 +70,7 @@
     self.size.text = @"";
     self.category.text = @"";
     self.appicon.image = nil;
-    self.description.text = @"";
+    self.descriptionfield.text = @"";
     [self.storebtn setTitle:@"" forState:UIControlStateNormal];
     for(img in [self.preveiwscroll subviews]) {
         [img removeFromSuperview];
@@ -151,14 +151,14 @@
     
     
     
-    self.description.text = [_appdetailarray valueForKey:@"description"];
-    self.description.font = [UIFont systemFontOfSize:12];
-    NSString *text = self.description.text;
+    self.descriptionfield.text = [_appdetailarray valueForKey:@"description"];
+    self.descriptionfield.font = [UIFont systemFontOfSize:12];
+    NSString *text = self.descriptionfield.text;
     
     CGSize stringSize = [text sizeWithFont:[UIFont systemFontOfSize:12]
                          constrainedToSize:CGSizeMake(668, CGFLOAT_MAX)
                              lineBreakMode:NSLineBreakByWordWrapping];
-    [self.description setFrame:CGRectMake(20, 598, 668, stringSize.height+500)];
+    [self.descriptionfield setFrame:CGRectMake(20, 598, 668, stringSize.height+500)];
     
     
     int ippiccount = [[self.appdetailarray valueForKey:@"iphone_screenshots"] count];
@@ -271,36 +271,36 @@
 
 
 -(IBAction)appstorebtnpressd:(id)sender{
-    NSError *error;
-    if (![[GANTracker sharedTracker] trackPageview:self.detailItem withError:&error]) {
-         NSLog(@"%@",error);
-    }
+//    NSError *error;
+//    if (![[GANTracker sharedTracker] trackPageview:self.detailItem withError:&error]) {
+//         NSLog(@"%@",error);
+//    }
     
-    if ([[[UIDevice currentDevice] systemVersion] floatValue] > 6.0) {
-        NSDictionary *params = @{ SKStoreProductParameterITunesItemIdentifier: self.detailItem };
-        SKStoreProductViewController *store = [[SKStoreProductViewController alloc] init];
-        store.delegate = self;
-        [store loadProductWithParameters:params completionBlock:^(BOOL result, NSError *error) {
-            if (!result) {
-                double delayInSeconds = 1.0;
-                dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, delayInSeconds * NSEC_PER_SEC);
-                dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
-                    [self dismissViewControllerAnimated:YES completion:nil];
-                    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:[_appdetailarray valueForKey:@"url"]]];
-                    
-                });
-            }
-        }];
-        [self presentViewController:store animated:YES completion:nil];
-    }else{
+//    if ([[[UIDevice currentDevice] systemVersion] floatValue] > 6.0) {
+//        NSDictionary *params = @{ SKStoreProductParameterITunesItemIdentifier: self.detailItem };
+//        SKStoreProductViewController *store = [[SKStoreProductViewController alloc] init];
+//        store.delegate = self;
+//        [store loadProductWithParameters:params completionBlock:^(BOOL result, NSError *error) {
+//            if (!result) {
+//                double delayInSeconds = 1.0;
+//                dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, delayInSeconds * NSEC_PER_SEC);
+//                dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
+//                    [self dismissViewControllerAnimated:YES completion:nil];
+//                    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:[_appdetailarray valueForKey:@"url"]]];
+//
+//                });
+//            }
+//        }];
+//        [self presentViewController:store animated:YES completion:nil];
+//    }else{
         [[UIApplication sharedApplication] openURL:[NSURL URLWithString:[_appdetailarray valueForKey:@"url"]]];
-    }
+//    }
 }
--(void)productViewControllerDidFinish:(SKStoreProductViewController *)viewController{
-    [self dismissViewControllerAnimated:YES completion:^{
-        nil;
-    }];
-}
+//-(void)productViewControllerDidFinish:(SKStoreProductViewController *)viewController{
+//    [self dismissViewControllerAnimated:YES completion:^{
+//        nil;
+//    }];
+//}
 
 -(IBAction)viewinTongbuTui:(id)sender{
     if ([[UIApplication sharedApplication] canOpenURL:[NSURL URLWithString:@"tbtui://opendetail"]]) {
@@ -310,44 +310,44 @@
 
 
 
--(void)loadAdmobAdView{
-    [bannerView_ removeFromSuperview];
-    bannerView_ = nil;
-    bannerView_ = [[GADBannerView alloc] initWithAdSize:kGADAdSizeSmartBannerPortrait];
-    bannerView_.adUnitID = @"a152b18c3368568";
-    bannerView_.rootViewController = self;
-    [self.view addSubview:bannerView_];
-    [bannerView_ setDelegate:self];
-    GADRequest *request = [GADRequest request];
-    request.testDevices = [NSArray arrayWithObjects:GAD_SIMULATOR_ID,nil];
-    [bannerView_ loadRequest:request];
-}
-- (void)adView:(GADBannerView *)bannerView didFailToReceiveAdWithError:(GADRequestError *)error {
-    //NSLog(@"didFailToReceiveAdmobWithError%@", [error localizedDescription]);
-    //[self loadiAdView];
-    [self loadAdmobAdView];
-}
+//-(void)loadAdmobAdView{
+//    [bannerView_ removeFromSuperview];
+//    bannerView_ = nil;
+//    bannerView_ = [[GADBannerView alloc] initWithAdSize:kGADAdSizeSmartBannerPortrait];
+//    bannerView_.adUnitID = admobunitID;
+//    bannerView_.rootViewController = self;
+//    [self.view addSubview:bannerView_];
+//    [bannerView_ setDelegate:self];
+//    GADRequest *request = [GADRequest request];
+//    request.testDevices = [NSArray arrayWithObjects:GAD_SIMULATOR_ID,nil];
+//    [bannerView_ loadRequest:request];
+//}
+//- (void)adView:(GADBannerView *)bannerView didFailToReceiveAdWithError:(GADRequestError *)error {
+//    //NSLog(@"didFailToReceiveAdmobWithError%@", [error localizedDescription]);
+//    //[self loadiAdView];
+//    [self loadAdmobAdView];
+//}
 
-- (void)adViewDidReceiveAd:(GADBannerView *)bannerView {
-    //NSLog(@"Ad loaded");
-    //[UIView beginAnimations:@"BannerSlide" context:nil];
-    if ([[[UIDevice currentDevice] systemVersion] floatValue] >= 7.0) {
-        bannerView.frame = CGRectMake(0.0,
-                                      self.view.frame.size.height -
-                                      bannerView.frame.size.height - 50,
-                                      bannerView.frame.size.width,
-                                      bannerView.frame.size.height);
-    }else{
-        bannerView.frame = CGRectMake(0.0,
-                                      self.view.frame.size.height -
-                                      bannerView.frame.size.height,// + 10,
-                                      bannerView.frame.size.width,
-                                      bannerView.frame.size.height);
-    }
-    [UIView commitAnimations];
-}
+//- (void)adViewDidReceiveAd:(GADBannerView *)bannerView {
+//    //NSLog(@"Ad loaded");
+//    //[UIView beginAnimations:@"BannerSlide" context:nil];
+//    if ([[[UIDevice currentDevice] systemVersion] floatValue] >= 7.0) {
+//        bannerView.frame = CGRectMake(0.0,
+//                                      self.view.frame.size.height -
+//                                      bannerView.frame.size.height - 50,
+//                                      bannerView.frame.size.width,
+//                                      bannerView.frame.size.height);
+//    }else{
+//        bannerView.frame = CGRectMake(0.0,
+//                                      self.view.frame.size.height -
+//                                      bannerView.frame.size.height,// + 10,
+//                                      bannerView.frame.size.width,
+//                                      bannerView.frame.size.height);
+//    }
+//    [UIView commitAnimations];
+//}
 - (void)didRotateFromInterfaceOrientation:(UIInterfaceOrientation)fromInterfaceOrientation{
-    [self loadAdmobAdView];
+    //[self loadAdmobAdView];
 }
 
 

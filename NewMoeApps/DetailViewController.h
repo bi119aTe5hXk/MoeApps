@@ -10,7 +10,7 @@
 #import "iHasApp.h"
 #import "CheckAppInstalled.h"
 #import <StoreKit/StoreKit.h>
-@interface DetailViewController : UIViewController<MoeAppsAPIDelegate,SKStoreProductViewControllerDelegate,UIActionSheetDelegate,UIAlertViewDelegate,CheckAppInstalledDelegate>{
+@interface DetailViewController : UIViewController<MoeAppsAPIDelegate,UIActionSheetDelegate,UIAlertViewDelegate,CheckAppInstalledDelegate>{
     MoeAppsAPI *moeapi;
     CheckAppInstalled *checkapp;
 }
@@ -27,7 +27,7 @@
 @property (nonatomic,retain) IBOutlet UILabel *category;
 @property (nonatomic, retain) IBOutlet UIButton *storebtn;
 //@property (nonatomic, retain) IBOutlet UIButton *tuibtn;
-@property (nonatomic, retain) IBOutlet UITextView *description;
+@property (nonatomic, retain) IBOutlet UITextView *descriptionfield;
 
 -(IBAction)appstorebtnpressd:(id)sender;
 -(IBAction)viewinTongbuTui:(id)sender;

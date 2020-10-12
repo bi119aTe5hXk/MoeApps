@@ -8,9 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface TabBarViewController : UITabBarController<GADBannerViewDelegate,GADInterstitialDelegate>{
-    GADBannerView *bannerView_;
-    GADInterstitial *interstitial_;
+@interface TabBarViewController : UITabBarController{//}<GADBannerViewDelegate,GADInterstitialDelegate>{
+    //GADBannerView *bannerView_;
+    //GADInterstitial *interstitial_;
 }
 
 @end
